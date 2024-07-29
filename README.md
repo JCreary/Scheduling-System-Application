@@ -1,21 +1,79 @@
 # Scheduling-System-Application
-Java Scheduling System Application
+Overview
 
-Title and Purpose of Application:
-The title of the application is “Scheduling System.” The purpose of the application is to create a user-interactive scheduling appointment system with the incorporation of a database (via MySQL) to store customer records, contacts, appointment details, users, divisions, and countries. The user will need to log in with an authenticated username and password then they will be able to add, update, and delete customer records or appointments and view reports.
+The C195 Project is a Java-based scheduling application that allows users to manage customer records and appointments efficiently. The application leverages JavaFX for the user interface and connects to a SQL database to retrieve and manage data.
 
-IDE Details:
-IntelliJ IDEA 2023.3.2 (Community Edition)
-VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
-JavaFX-SDK-17.0.6
-Loads FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.6
+Features
 
-Directions on how to run the program:
-Once the user runs the program, the user will be presented with the login screen. The login screen will be displayed in either French or English depending on the location of the user’s server. The time zone text field will list the location of the user’s system. The user will then be required to enter a valid username and password that matches a username and password combination in the user table of the MySQL database. Once the system determines that the username and password match a username and password in the database, the user login attempt will be logged in a txt file and the user will be transferred to the main menu screen. In the main menu screen, the user will have the ability to view reports and manipulate appointments and customer records. 
+Customer Management:
+Add new customer records.
+Update existing customer records.
+Delete customer records (if no associated appointments).
+Appointment Management:
+Add new appointments.
+Update existing appointments.
+Delete appointments.
+View appointments by current week, current month, or all appointments.
+Reports:
+Generate various reports based on customer and appointment data.
+Prerequisites
 
-Description of the additional report:
-For the additional report, I chose to create a report that displays customer IDs and the customer names of recently deleted customers. To create the report, I created an observable list in the DBCustomers class to store all deleted customers which is then called in the ReportsMenuController class. The reason I decided to create this report is because is to back up recently deleted customers. If the user makes a mistake and deletes a customer or is unsure which customer they just deleted they will be able to view the report and determine which customer was deleted. As long as the user does not log out of or close the program, they will be able to view deleted customers. 
+Java Development Kit (JDK) 8 or higher.
+JavaFX SDK.
+SQL database with the required schema and data.
+File Structure
 
-MySQL Connector driver version number:
-mysql-connector-java-8.0.31
+src/com/example/c195project/Controller/MainMenuController.java: Main controller for handling the main menu operations.
+src/com/example/c195project/Model/DBAppointments.java: Database operations related to appointments.
+src/com/example/c195project/Model/DBCustomers.java: Database operations related to customers.
+src/com/example/c195project/Model/DBCountries.java: Database operations related to countries.
+src/com/example/c195project/Model/DBDivisions.java: Database operations related to divisions.
+src/com/example/c195project/Model/Appointments.java: Model class for appointments.
+src/com/example/c195project/Model/Customers.java: Model class for customers.
+src/com/example/c195project/Model/Countries.java: Model class for countries.
+src/com/example/c195project/Model/Divisions.java: Model class for divisions.
+src/com/example/c195project/view/: FXML files for the user interface.
+Database Schema
 
+The application connects to a SQL database with the following tables:
+
+appointments: Stores appointment details.
+customers: Stores customer details.
+countries: Stores country details.
+divisions: Stores division details.
+Running the Application
+
+Set Up Database:
+Ensure your SQL database is set up with the required tables and data.
+Update the database connection settings in the relevant model classes (DBAppointments.java, DBCustomers.java, etc.).
+Compile and Run:
+Use an IDE like IntelliJ IDEA or Eclipse to import the project.
+Ensure the JavaFX SDK is properly configured in your IDE.
+Compile and run the Main class to start the application.
+Main Menu Operations
+
+Initialize Method
+The initialize method in MainMenuController is responsible for setting up the initial state of the application, including populating the customer and appointment tables with data from the database.
+
+Add, Update, Delete Operations
+The application provides methods to add, update, and delete customer records and appointments:
+
+onClickAddAppointment(ActionEvent actionEvent): Opens the add appointment menu.
+onClickUpdateAppointment(ActionEvent actionEvent): Opens the update appointment menu.
+onClickDeleteAppointment(ActionEvent actionEvent): Deletes the selected appointment.
+onClickAddCustomerRecord(ActionEvent actionEvent): Opens the add customer records menu.
+onClickUpdateCustomerRecord(ActionEvent actionEvent): Opens the update customer records menu.
+onClickDeleteCustomerRecord(ActionEvent actionEvent): Deletes the selected customer record if no associated appointments.
+View Filters
+The application allows users to filter appointments by current week, current month, or view all appointments:
+
+onSelectCurrentWeekAppointments(ActionEvent actionEvent): Filters appointments for the current week.
+onSelectCurrentMonthAppointments(ActionEvent actionEvent): Filters appointments for the current month.
+onSelectAllAppointments(ActionEvent actionEvent): Displays all appointments.
+Logout
+
+The onClickLogout(ActionEvent actionEvent) method logs the user out of the system and redirects to the login menu.
+
+Conclusion
+
+This scheduling application provides a robust solution for managing customer records and appointments, complete with filtering options and detailed CRUD operations. The use of JavaFX for the user interface and SQL for the backend ensures a seamless and efficient user experience.
