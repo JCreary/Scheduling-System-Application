@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195project.Controller.UpdateAppointmentMenuController">
+   <Text layoutX="33.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Appointment">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment ID:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <TextField fx:id="updateAppointmentIDAppointment" disable="true" editable="false" layoutX="205.0" layoutY="86.0" prefHeight="26.0" prefWidth="293.0" promptText="Auto-Generated" />
+   <TextField fx:id="updateTitleAppointment" layoutX="205.0" layoutY="122.0" prefHeight="26.0" prefWidth="293.0" />
+   <TextField fx:id="updateDescriptionAppointment" layoutX="205.0" layoutY="158.0" prefHeight="26.0" prefWidth="293.0" />
+   <TextField fx:id="updateLocationAppointment" layoutX="205.0" layoutY="194.0" prefHeight="26.0" prefWidth="293.0" />
+   <ComboBox fx:id="updateTypeAppointment" layoutX="205.0" layoutY="230.0" prefHeight="26.0" prefWidth="293.0" />
+   <DatePicker fx:id="updateStartDateAppointment" editable="false" layoutX="205.0" layoutY="266.0" prefHeight="26.0" prefWidth="293.0" />
+   <ComboBox fx:id="updateStartTimeAppointment" layoutX="205.0" layoutY="302.0" prefHeight="26.0" prefWidth="293.0" />
+   <DatePicker fx:id="updateEndDateAppointment" editable="false" layoutX="205.0" layoutY="338.0" prefHeight="26.0" prefWidth="293.0" />
+   <ComboBox fx:id="updateEndTimeAppointment" layoutX="205.0" layoutY="374.0" prefHeight="26.0" prefWidth="293.0" />
+   <ComboBox fx:id="updateCustomerIDAppointment" layoutX="205.0" layoutY="410.0" prefHeight="26.0" prefWidth="293.0" />
+   <ComboBox fx:id="updateUserIDAppointment" layoutX="205.0" layoutY="446.0" prefHeight="26.0" prefWidth="293.0" />
+   <ComboBox fx:id="updateContactIDAppointment" layoutX="205.0" layoutY="482.0" prefHeight="26.0" prefWidth="293.0" />
+   <Button layoutX="338.0" layoutY="522.0" mnemonicParsing="false" onAction="#onClickSaveUpdateAppointment" text="Save" />
+   <Button layoutX="399.0" layoutY="522.0" mnemonicParsing="false" onAction="#onClickCancelUpdateAppointment" text="Cancel" />
+   <Text layoutX="75.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="75.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact ID:">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Text>
+</AnchorPane>

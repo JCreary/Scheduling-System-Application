@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195project.Controller.ReportsMenuController">
+    <TableView fx:id="report1Tableview" layoutX="15.0" layoutY="112.0" prefHeight="172.0" prefWidth="984.0">
+      <columns>
+          <TableColumn fx:id="contactIDReport1Menu" prefWidth="82.0" text="Contact_ID" />
+          <TableColumn fx:id="contactNameReport1Menu" prefWidth="117.0" text="Contact_Name" />
+          <TableColumn fx:id="appointmentIDReport1Menu" prefWidth="95.0" text="Appointment_ID" />
+          <TableColumn fx:id="typeReport1Menu" prefWidth="94.0" text="Type" />
+          <TableColumn fx:id="descriptionReport1Menu" prefWidth="134.0" text="Description" />
+          <TableColumn fx:id="startDateAndTimeReport1Menu" prefWidth="148.0" text="Start Date and Time" />
+          <TableColumn fx:id="endDateAndTimeReport1Menu" prefWidth="133.0" text="End Date and Time" />
+          <TableColumn fx:id="customerIDReport1Menu" minWidth="0.0" prefWidth="172.0" text="Customer_ID" />
+      </columns>
+    </TableView>
+    <Text layoutX="20.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports Menu" wrappingWidth="200.154296875">
+        <font>
+          <Font name="System Bold" size="24.0" />
+        </font>
+    </Text>
+   <Button layoutX="936.0" layoutY="526.0" mnemonicParsing="false" onAction="#onClickCancelReport" text="Cancel" />
+   <Text layoutX="20.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report 1 (Schedule for each Contact)" wrappingWidth="232.154296875">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Text>
+   <TableView fx:id="report3Tableview" layoutX="572.0" layoutY="372.0" prefHeight="133.0" prefWidth="428.0">
+      <columns>
+         <TableColumn fx:id="customerIDReport3Menu" prefWidth="212.0" text="Customer_ID" />
+         <TableColumn fx:id="customerNameReport3Menu" prefWidth="204.0" text="Customer Name" />
+      </columns>
+   </TableView>
+   <Text layoutX="26.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report 2 (Total number of Customer Appointments)" wrappingWidth="314.154296875">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Text>
+   <Text layoutX="579.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report 3 (List of deleted Customers - list refreshes upon system exit)" wrappingWidth="414.154296875">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Text>
+   <TextField fx:id="searchTypeMonthReportMenu" alignment="CENTER" layoutX="43.0" layoutY="376.0" onAction="#onActionSearchTypeMonthReportMenu" prefHeight="42.0" prefWidth="280.0" promptText="Search by Type (String) or Month (String)" />
+   <ComboBox fx:id="selectContactIDReportMenu" layoutX="818.0" layoutY="60.0" onAction="#onContactIDSelected" prefWidth="150.0" promptText="Select Contact ID" />
+   <TextField fx:id="totalCustomerAppointmentText" disable="true" editable="false" layoutX="266.0" layoutY="438.0" prefHeight="25.0" prefWidth="57.0" />
+   <Text layoutX="43.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total number of Customer Appointments:" wrappingWidth="211.154296875">
+      <font>
+         <Font size="12.0" />
+      </font>
+   </Text>
+</AnchorPane>
